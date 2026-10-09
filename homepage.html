@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PinnaQuest | Gamified Learning</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;800&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-green: #1db968;
+        --dark-green: #156d44;
+        --text-dark: #2d3748;
+        --text-light: #718096;
+        --bg-light: #f9fbfb;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--bg-light);
+        color: var(--text-dark);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      /* Navbar */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 80px;
+      }
+
+      .logo {
+        font-family: "Lexend", sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        color: #1a4d36;
+      }
+
+      /* Hero Section */
+      .hero {
+        text-align: center;
+        padding: 10px 20px;
+      }
+
+      .badge {
+        display: inline-block;
+        background: #e6f6ee;
+        color: var(--primary-green);
+        padding: 8px 16px;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 30px;
+      }
+
+      h1 {
+        font-family: "Lexend", sans-serif;
+        font-size: 4rem;
+        font-weight: 800;
+        letter-spacing: -1px;
+        margin-bottom: 20px;
+      }
+
+      .highlight-green {
+        color: var(--primary-green);
+        text-decoration: underline wavy #a0eac3;
+      }
+
+      .highlight-orange {
+        color: #f6ad55;
+      }
+
+      .subtitle {
+        color: var(--text-light);
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+      }
+
+      .cta-button {
+        background: var(--primary-green);
+        color: white;
+        padding: 16px 40px;
+        border: none;
+        border-radius: 12px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: 0 10px 20px rgba(29, 185, 104, 0.2);
+        transition:
+          transform 0.2s,
+          background 0.2s;
+      }
+
+      .cta-button:hover {
+        background: var(--dark-green);
+        transform: translateY(-2px);
+      }
+
+      /* Features Section */
+      .features {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 40px 80px;
+        flex-wrap: wrap;
+      }
+
+      .feature-card {
+        background: white;
+        border: 1px solid #edf2f7;
+        border-radius: 20px;
+        padding: 40px 30px;
+        width: 350px;
+        transition: box-shadow 0.3s;
+      }
+
+      .feature-card:hover {
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+      }
+
+      .icon-box {
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+      }
+
+      .green-bg {
+        background: #e6f6ee;
+        color: #1db968;
+      }
+      .purple-bg {
+        background: #f3e8ff;
+        color: #805ad5;
+      }
+      .orange-bg {
+        background: #fffaf0;
+        color: #dd6b20;
+      }
+
+      .feature-card h3 {
+        margin-bottom: 12px;
+        font-size: 1.3rem;
+      }
+
+      .feature-card p {
+        color: var(--text-light);
+        font-size: 0.95rem;
+      }
+
+      .logo-img {
+        height: 60px; /* Adjust mo height depende sa laki ng image mo */
+        width: auto;
+        object-fit: contain;
+        mix-blend-mode: multiply;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <img src="pinnaquest logo.JPG" alt="PinnaQuest Logo" class="logo-img" />
+    </nav>
+
+    <main class="hero">
+      <div class="badge">🏆 Gamified Learning for the Modern Student</div>
+
+      <h1>
+        Turn your <span class="highlight-green">study notes</span><br />
+        into epic <span class="highlight-orange">quests.</span>
+      </h1>
+
+      <p class="subtitle">
+        Upload your PDF files. PinnaQuest automatically generates<br />
+        interactive quizzes, tracks your progress, and rewards you with
+        badges<br />
+        as you master your subjects.
+      </p>
+
+      <a href="loginpanel.php" style="text-decoration: none">
+        <button class="cta-button">Start Your Quest &rarr;</button>
+      </a>
+    </main>
+
+    <section class="features">
+      <div class="feature-card">
+        <div class="icon-box green-bg">📖</div>
+        <h3>Upload Material</h3>
+        <p>Drag and drop your learning PDFs.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon-box purple-bg">🧠</div>
+        <h3>Generate Quiz</h3>
+        <p>
+          Our system instantly extracts key concepts and creates challenging
+          quizzes.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon-box orange-bg">🏆</div>
+        <h3>Earn Rewards</h3>
+        <p>
+          Compete on the leaderboard, earn badges, and level up your profile.
+        </p>
+      </div>
+    </section>
+
+    <script>
+      document.querySelector(".cta-button").addEventListener("click", () => {
+        window.location.href = "login.html"; // Papunta sa login panel
+      });
+
+      // Optional: Smoothly reveal cards on scroll
+      const cards = document.querySelectorAll(".feature-card");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = 1;
+              entry.target.style.transform = "translateY(0)";
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+
+      cards.forEach((card) => {
+        card.style.opacity = 0;
+        card.style.transform = "translateY(20px)";
+        card.style.transition = "all 0.6s ease-out";
+        observer.observe(card);
+      });
+    </script>
+  </body>
+</html>
